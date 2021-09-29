@@ -18,22 +18,22 @@ from collections import Counter
 
 # find total number of sock pairs that match
 def sockMerchant(n, ar):
-    count_ar = Counter(ar)
-    pairs = 0
-    for i in count_ar:
-        check_pair = count_ar[i]/2
-        pairs += int(check_pair)
-    return pairs
+  count_ar = Counter(ar)
+  pairs = 0
+  for i in count_ar:
+    pairs += count_ar[i]//2
+  return pairs
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+  fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    n = int(input().strip())
+  n = int(input().strip())
 
-    ar = list(map(int, input().rstrip().split()))
+  ar = list(map(int, input().rstrip().split()))
 
-    result = sockMerchant(n, ar)
+  result = sockMerchant(n, ar)
 
-    fptr.write(str(result) + '\n')
+  fptr.write(str(result) + '\n')
 
-    fptr.close()
+  fptr.close()
+
