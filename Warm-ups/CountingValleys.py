@@ -15,6 +15,8 @@ import sys
 #  2. STRING path
 #
 
+# if sealevel reached and user is going up, valley was passed
+# old comment was if sea level reached and user previously was downhill
 def countingValleys(steps, path):
   valley = 0
   level = 0
